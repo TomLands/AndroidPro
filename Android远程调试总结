@@ -1,0 +1,13 @@
+无源码APK调试破解总结
+一、静态方法，直接修改二进制文件，重新签名
+     （1）解压APK文件 用7z、zip等软件解压apk包，解出×.dex  (解包软件 7z zip)
+     （2）用IDA反编译*.dex文件，读取代码                  （反编译软件 IDA GDA JEB ）
+     ×（1） 也可以供GDA直接查看APK文件
+     （3）用WinHex等二进制编辑器修改字节码指令              (winHex UEditor)
+     （4）用dexFlact 修复×.dex
+     (5)添加到压缩包，重新签名                             （签名工具 jarsigner.jar keytools)
+     
+二、动态调试法
+   工具环境
+    AS，idea插件，雷电模拟器、Bluestack等模拟器，修改
+    (1) 
